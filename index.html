@@ -2,112 +2,90 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Gurleen Sabharwal - Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kulveen Kaur - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Outfit', sans-serif;
-      background-color: #f0f4f8;
-      color: #333;
-    }
-
-    nav {
-      background-color: #004080;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    nav a {
+      background: linear-gradient(135deg, #2c2e3e, #1f212a);
       color: white;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1.1rem;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    .hero {
       display: flex;
-      flex-direction: column;
-      align-items: center;
       justify-content: center;
-      min-height: 90vh;
-      text-align: center;
+      align-items: center;
+      min-height: 100vh;
       padding: 2rem;
     }
 
-    .hero img {
-      width: 150px;
-      height: 150px;
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 900px;
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        flex-direction: row;
+        text-align: left;
+      }
+    }
+
+    .profile-pic {
+      width: 250px;
+      height: 250px;
       border-radius: 50%;
       object-fit: cover;
-      margin-bottom: 1.5rem;
-      border: 4px solid #004080;
-    }
-
-    .hero h1 {
-      font-size: 2.8rem;
-      margin: 0.5rem 0;
-      color: #004080;
-    }
-
-    .hero h2 {
-      font-size: 1.4rem;
-      color: #555;
+      border: 5px solid #fff;
       margin-bottom: 2rem;
     }
 
-    .buttons {
-      display: flex;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-      justify-content: center;
+    @media (min-width: 768px) {
+      .profile-pic {
+        margin-bottom: 0;
+        margin-right: 3rem;
+      }
     }
 
-    .buttons a {
-      background-color: #004080;
-      color: white;
-      padding: 0.7rem 1.5rem;
-      border-radius: 25px;
-      font-weight: bold;
-      text-decoration: none;
-      transition: background-color 0.3s;
+    .info h1 {
+      font-size: 2.5rem;
+      font-weight: 900;
+      margin: 0;
+      letter-spacing: 1px;
     }
 
-    .buttons a:hover {
-      background-color: #0066cc;
+    .info h2 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #b798f2;
+      margin: 0.5rem 0 1.5rem;
+    }
+
+    .info p {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: #e0e0e0;
+      max-width: 600px;
     }
   </style>
 </head>
 <body>
 
-  <nav>
-    <a href="index.html">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="resume.html">Resume</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
-  <section class="hero">
-    <img src="profile.jpg" alt="Gurleen Sabharwal" />
-    <h1>Gurleen Sabharwal</h1>
-    <h2>Data Analyst | SQL | Power BI | Python</h2>
-
-    <div class="buttons">
-      <a href="GurleenSabharwalResume.pdf" target="_blank">View Resume</a>
-      <a href="projects.html">View Projects</a>
+  <div class="container">
+    <img src="9660f9c5-b99f-4836-8dc5-1dcf1e01969d.png" alt="Kulveen Kaur" class="profile-pic">
+    <div class="info">
+      <h1>KULVEEN KAUR</h1>
+      <h2>DATA SCIENCE & ANALYTICS PROFESSIONAL</h2>
+      <p>
+        I am a data-driven graduate student passionate about transforming raw data into meaningful insights. 
+        With hands-on experience in SQL and Power BI at Strategic Research Insights, I thrive at uncovering 
+        trends that drive smart business decisions and strategic growth. 
+        Actively seeking internship roles where I can make impact.
+      </p>
     </div>
-  </section>
+  </div>
 
 </body>
 </html>
