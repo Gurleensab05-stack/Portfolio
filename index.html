@@ -23,7 +23,7 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
-      max-width: 900px;
+      max-width: 1000px;
     }
 
     @media (min-width: 768px) {
@@ -34,12 +34,21 @@
     }
 
     .profile-pic {
-      width: 250px;
-      height: 250px;
+      width: 320px;
+      height: 320px;
       border-radius: 50%;
-      object-fit: cover;
+      overflow: hidden;
       border: 5px solid #fff;
       margin-bottom: 2rem;
+      position: relative;
+    }
+
+    .profile-pic img {
+      width: 120%;
+      height: 120%;
+      object-fit: cover;
+      object-position: center;
+      transform: scale(1.15);
     }
 
     @media (min-width: 768px) {
@@ -50,21 +59,21 @@
     }
 
     .info h1 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       font-weight: 900;
       margin: 0;
       letter-spacing: 1px;
     }
 
     .info h2 {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       font-weight: 600;
       color: #b798f2;
       margin: 0.5rem 0 1.5rem;
     }
 
     .info p {
-      font-size: 1.05rem;
+      font-size: 1.1rem;
       line-height: 1.6;
       color: #e0e0e0;
       max-width: 600px;
@@ -74,7 +83,9 @@
 <body>
 
   <div class="container">
-    <img src="profile.jpg" alt="Gurleen Sabharwal" class="profile-pic">
+    <div class="profile-pic">
+      <img src="profile.jpg" alt="Gurleen Sabharwal">
+    </div>
     <div class="info">
       <h1>GURLEEN SABHARWAL</h1>
       <h2>DATA SCIENCE & ANALYTICS PROFESSIONAL</h2>
