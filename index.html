@@ -196,14 +196,78 @@
     .skill-card.open .arrow {
       transform: rotate(180deg);
     }
+   
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #1f212a;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+  }
+  
+  .nav-logo {
+    font-weight: 900;
+    font-size: 1.4rem;
+    color: #b798f2;
+    letter-spacing: 1px;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 2rem;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #b798f2;
+  }
+  
+  /* Special button style for Resume */
+  .resume-button {
+    background-color: #b798f2;
+    color: #1f212a !important;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .resume-button:hover {
+    background-color: #a07df5;
+    color: white !important;
+  }
+  
+  /* Push content down so it doesn’t hide behind fixed nav */
+  body {
+    padding-top: 80px;
+  }
   </style>
 </head>
 <body>
-  <nav style="background-color: #1f212a; padding: 1rem 2rem; display: flex; justify-content: flex-end; gap: 2rem; font-size: 1rem; font-weight: 600;">
-    <a href="index.html" style="color: white; text-decoration: none;">Home</a>
-    <a href="projects.html" style="color: white; text-decoration: none;">Projects</a>
+  <!-- Fixed Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">Gurleen</div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="GurleenSabharwalResume_.pdf" download class="resume-button">Resume</a>
+      </div>
+    </div>
   </nav>
-
   <!-- Intro Section -->
   <div class="section" style="padding: 2rem;">
     <div class="profile-pic">
