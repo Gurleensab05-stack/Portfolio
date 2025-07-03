@@ -1,144 +1,146 @@
-
-html
-Copy
-Edit
-<!-- projects.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Gurleen Sabharwal - Projects</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects | Gurleen Sabharwal</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
-    /* Same styles as index.html for consistency */
-    * {
-      box-sizing: border-box;
-    }
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0; padding: 0;
-      background: #f9f9f9;
-      color: #333;
-    }
-    nav {
-      background-color: #004080;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1.1rem;
-      padding: 0.3rem 0.6rem;
-      border-radius: 4px;
-      transition: background-color 0.3s ease;
-    }
-    nav a:hover,
-    nav a.active {
-      background-color: #0073e6;
-    }
-    .container {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-    h1 {
-      text-align: center;
-      color: #004080;
-      margin-bottom: 0.2rem;
-    }
-    h2 {
-      color: #004080;
-      border-bottom: 2px solid #004080;
-      padding-bottom: 0.3rem;
-      margin-top: 2rem;
-    }
-    .project {
-      background: white;
-      padding: 1rem 1.5rem;
-      margin-top: 1.5rem;
-      border-radius: 6px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .project h3 {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fdfdfd;
       margin: 0;
-      color: #004080;
-    }
-    .project-tech {
-      font-style: italic;
-      color: #666;
-      margin: 0.3rem 0 0.8rem 0;
-      font-size: 0.9rem;
-    }
-    .project-desc {
-      font-size: 1rem;
-      line-height: 1.4;
-      margin-bottom: 0.5rem;
-    }
-    .github-link {
-      text-decoration: none;
-      color: #0073e6;
-      font-weight: 600;
-      font-size: 0.95rem;
-    }
-    .github-link:hover {
-      text-decoration: underline;
+      padding: 0;
     }
 
-    /* Responsive */
-    @media (max-width: 600px) {
-      nav {
-        flex-direction: column;
-        gap: 1rem;
-      }
+    header {
+      background-color: #222;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      color: white;
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    .btn-resume {
+      margin-top: 10px;
+      display: inline-block;
+      background-color: #f97316;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .projects-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 40px 20px;
+    }
+
+    .project-card {
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 340px;
+      overflow: hidden;
+      transition: transform 0.2s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .project-content {
+      padding: 20px;
+    }
+
+    .project-title {
+      font-size: 1.3rem;
+      margin: 0;
+      color: #111827;
+    }
+
+    .project-tools {
+      font-size: 0.9rem;
+      color: #6b7280;
+      margin-bottom: 10px;
+    }
+
+    .project-description {
+      font-size: 0.95rem;
+      margin-bottom: 10px;
+    }
+
+    .project-links a {
+      color: #3b82f6;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #6b7280;
     }
   </style>
 </head>
 <body>
-  <nav>
-    <a href="index.html">About Me</a>
-    <a href="projects.html" class="active">Projects</a>
-    <a href="resume.html">Resume</a>
-    <a href="contact.html">Contact</a>
-  </nav>
 
-  <div class="container">
-    <h1>Projects</h1>
+  <header>
+    <h1>My Projects</h1>
+    <a href="GurleenSabharwalResume_.pdf" class="btn-resume" download>📄 Download Resume</a>
+  </header>
 
-    <section class="project">
-      <h3>Market Segmentation Analysis</h3>
-      <p class="project-tech">Technologies: Python, SQL, Power BI</p>
-      <p class="project-desc">
-        Performed detailed segmentation analysis for pharmaceutical clients to identify target customer groups and optimize marketing strategies.
-      </p>
-      <a href="https://github.com/Gurleensab05-stack/Market-Segmentation-Project" target="_blank" class="github-link" rel="noopener noreferrer">View on GitHub</a>
-    </section>
+  <section class="projects-container">
 
-    <section class="project">
-      <h3>Sales Data Dashboard</h3>
-      <p class="project-tech">Technologies: Power BI, SQL</p>
-      <p class="project-desc">
-        Created an interactive sales dashboard for visualizing and tracking sales performance across regions and products.
-      </p>
-      <a href="https://github.com/Gurleensab05-stack/Sales-Dashboard" target="_blank" class="github-link" rel="noopener noreferrer">View on GitHub</a>
-    </section>
+    <!-- Project 1: Novartis Market Segmentation -->
+    <div class="project-card">
+      <div class="project-content">
+        <h2 class="project-title">Market Segmentation – Novartis</h2>
+        <p class="project-tools">SQL • SPSS • Tableau • PowerPoint</p>
+        <p class="project-description">
+          Led an end-to-end segmentation project to support the launch of a new pharmaceutical product.
+          Performed cluster analysis on structured survey data from 500+ healthcare professionals and integrated secondary datasets.
+          Delivered actionable targeting strategies that accelerated product adoption by 25%.
+        </p>
+      </div>
+    </div>
 
-    <section class="project">
-      <h3>Financial Well-being Analysis</h3>
-      <p class="project-tech">Technologies: Python, Tableau</p>
-      <p class="project-desc">
-        Conducted comprehensive analysis on cost of living and financial health indicators across Indian cities.
-      </p>
-      <a href="https://github.com/Gurleensab05-stack/Financial-Wellbeing-Analysis" target="_blank" class="github-link" rel="noopener noreferrer">View on GitHub</a>
-    </section>
+    <!-- Project 2: Sales Data Analysis -->
+    <div class="project-card">
+      <img src="sales_dashboard.png" alt="Sales Dashboard" class="project-image" />
+      <div class="project-content">
+        <h2 class="project-title">Sales Data Analysis</h2>
+        <p class="project-tools">SQL • Power BI • ETL • Data Modeling</p>
+        <p class="project-description">
+          Analyzed multi-market sales data using advanced SQL and built interactive Power BI dashboards.
+          Performed trend analysis, visualized top customers/products, and automated ETL pipelines to reduce reporting time by 40%.
+        </p>
+        <div class="project-links">
+          <a href="https://github.com/Gurleensab05-stack/Sales-Data-Analysis" target="_blank">🔗 GitHub Repo</a>
+        </div>
+      </div>
+    </div>
 
-    <!-- Add more projects here -->
-  </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Gurleen Sabharwal • All rights reserved.
+  </footer>
+
 </body>
 </html>
