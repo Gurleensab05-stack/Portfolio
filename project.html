@@ -76,13 +76,19 @@
       transform: translateY(-5px);
     }
 
+    .image-wrapper {
+      height: 200px;
+      background-color: #f9fafb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+    }
+    
     .project-image {
-      width: 100%;
-      height: 200px; /* Keep all images same height */
-      object-fit: contain; /* Ensures full image is shown without cropping */
-      background-color: #f9fafb; /* Light background to fill empty space */
-      padding: 10px; /* Prevent edges from touching container */
-      display: block;
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
     }
 
     .project-content {
@@ -137,34 +143,38 @@
   <section class="projects-container">
 
     <!-- Project 1: Novartis Market Segmentation -->
-    <div class="project-card">
-      <img src="A_website_portfolio_image_consists_of_two_main_sec.png" alt="Segmentation" class="project-image" />
-      <div class="project-content">
-        <h2 class="project-title">Market Segmentation – Novartis</h2>
-        <p class="project-tools">SQL • SPSS • Tableau • PowerPoint</p>
-        <p class="project-description">
-          Led an end-to-end segmentation project to support the launch of a new pharmaceutical product.
-          Performed cluster analysis on structured survey data from 500+ healthcare professionals and integrated secondary datasets.
-          Delivered actionable targeting strategies that accelerated product adoption by 25%.
-        </p>
-      </div>
-    </div>
+<div class="project-card">
+  <div class="image-wrapper">
+    <img src="A_website_portfolio_image_consists_of_two_main_sec.png" alt="Segmentation" class="project-image" />
+  </div>
+  <div class="project-content">
+    <h2 class="project-title">Market Segmentation – Novartis</h2>
+    <p class="project-tools">SQL • SPSS • Tableau • PowerPoint</p>
+    <p class="project-description">
+      Led an end-to-end segmentation project to support the launch of a new pharmaceutical product.
+      Performed cluster analysis on structured survey data from 500+ healthcare professionals and integrated secondary datasets.
+      Delivered actionable targeting strategies that accelerated product adoption by 25%.
+    </p>
+  </div>
+</div>
 
-    <!-- Project 2: Sales Data Analysis -->
-    <div class="project-card">
-      <img src="92f108ce-a1d1-40e2-a1bd-bfba8553a339.png" alt="Sales Dashboard" class="project-image" />
-      <div class="project-content">
-        <h2 class="project-title">Sales Data Analysis</h2>
-        <p class="project-tools">SQL • Power BI • ETL • Data Modeling</p>
-        <p class="project-description">
-          Analyzed multi-market sales data using advanced SQL and built interactive Power BI dashboards.
-          Performed trend analysis, visualized top customers/products, and automated ETL pipelines to reduce reporting time by 40%.
-        </p>
-        <div class="project-links">
-          <a href="https://github.com/Gurleensab05-stack/Sales-Data-Analysis" target="_blank">🔗 GitHub Repo</a>
-        </div>
-      </div>
+<!-- Project 2: Sales Data Analysis -->
+<div class="project-card">
+  <div class="image-wrapper">
+    <img src="92f108ce-a1d1-40e2-a1bd-bfba8553a339.png" alt="Sales Dashboard" class="project-image" />
+  </div>
+  <div class="project-content">
+    <h2 class="project-title">Sales Data Analysis</h2>
+    <p class="project-tools">SQL • Power BI • ETL • Data Modeling</p>
+    <p class="project-description">
+      Analyzed multi-market sales data using advanced SQL and built interactive Power BI dashboards.
+      Performed trend analysis, visualized top customers/products, and automated ETL pipelines to reduce reporting time by 40%.
+    </p>
+    <div class="project-links">
+      <a href="https://github.com/Gurleensab05-stack/Sales-Data-Analysis" target="_blank">🔗 GitHub Repo</a>
     </div>
+  </div>
+</div>
 
   </section>
 
