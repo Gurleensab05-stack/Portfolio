@@ -78,11 +78,11 @@
 
     .project-image {
       width: 100%;
-      height: 100px; /* Increase or decrease as needed */
-      object-fit: contain; /* or try cover if you want cropping */
-      background-color: #f3f4f6; /* light background to fill extra space */
+      height: 200px; /* Keep all images same height */
+      object-fit: contain; /* Ensures full image is shown without cropping */
+      background-color: #f9fafb; /* Light background to fill empty space */
+      padding: 10px; /* Prevent edges from touching container */
       display: block;
-      margin: auto;
     }
 
     .project-content {
@@ -138,7 +138,7 @@
 
     <!-- Project 1: Novartis Market Segmentation -->
     <div class="project-card">
-      <img src="A_website_portfolio_image_consists_of_two_main_sec.png" alt="Segmentation" class="project-image small-image" />
+      <img src="A_website_portfolio_image_consists_of_two_main_sec.png" alt="Segmentation" class="project-image" />
       <div class="project-content">
         <h2 class="project-title">Market Segmentation – Novartis</h2>
         <p class="project-tools">SQL • SPSS • Tableau • PowerPoint</p>
