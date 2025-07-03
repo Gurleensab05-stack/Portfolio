@@ -78,8 +78,11 @@
 
     .project-image {
       width: 100%;
-      height: 200px;
-      object-fit: cover;
+      height: 220px; /* Increase or decrease as needed */
+      object-fit: contain; /* or try cover if you want cropping */
+      background-color: #f3f4f6; /* light background to fill extra space */
+      display: block;
+      margin: auto;
     }
 
     .project-content {
