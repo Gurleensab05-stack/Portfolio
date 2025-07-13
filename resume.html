@@ -1,309 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Resume | Gurleen Sabharwal</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume | Gurleen Sabharwal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fdfdfd;
+      color: #111827;
+      padding: 2rem;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+    .tab {
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      border: 2px solid transparent;
+    }
+    .tab.active {
+      background-color: #e9d5ff;
+      border-color: #a855f7;
+      color: #6b21a8;
+    }
+    .timeline {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+      padding-left: 20px;
+      border-left: 3px solid #c084fc;
+    }
+    .entry {
+      margin-bottom: 2rem;
+      position: relative;
+    }
+    .entry:before {
+      content: "";
+      position: absolute;
+      left: -10px;
+      top: 4px;
+      height: 12px;
+      width: 12px;
+      background: #c084fc;
+      border-radius: 50%;
+    }
+    .entry h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.25rem;
+    }
+    .entry p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+    .entry .date {
+      font-size: 0.9rem;
+      color: #7c3aed;
+      margin-top: 0.25rem;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
 
-    <!-- ===========  Base Styling  =========== -->
-    <style>
-      :root {
-        --clr-bg: #fdfdfd;
-        --clr-card: #ffffff;
-        --clr-primary: #3b82f6;
-        --clr-text-dark: #111827;
-        --clr-text: #374151;
-        --clr-muted: #6b7280;
-        --radius-lg: 1.25rem;
-        --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      }
+  <h1 class="section-title">📄 Resume</h1>
 
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
+  <div class="tabs">
+    <div class="tab active" onclick="showSection('education')">🎓 EDUCATION</div>
+    <div class="tab" onclick="showSection('experience')">💼 EXPERIENCE</div>
+  </div>
 
-      body {
-        font-family: "Segoe UI", sans-serif;
-        background-color: var(--clr-bg);
-        color: var(--clr-text);
-        line-height: 1.6;
-      }
-
-      a {
-        color: var(--clr-primary);
-        text-decoration: none;
-      }
-      a:hover {
-        text-decoration: underline;
-      }
-
-      header {
-        position: sticky;
-        top: 0;
-        background-color: var(--clr-card);
-        box-shadow: var(--shadow);
-        z-index: 1000;
-      }
-      .navbar {
-        max-width: 1200px;
-        margin: auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem 2rem;
-      }
-      .logo {
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: var(--clr-text-dark);
-      }
-      .nav-links {
-        list-style: none;
-        display: flex;
-        gap: 1.5rem;
-      }
-      .nav-links a {
-        font-weight: 500;
-        color: var(--clr-text-dark);
-        transition: color 0.3s;
-      }
-      .nav-links a:hover {
-        color: var(--clr-primary);
-      }
-
-      .hero {
-        max-width: 900px;
-        margin: 3rem auto 2rem auto;
-        text-align: center;
-      }
-      .hero h1 {
-        font-size: 2.25rem;
-        color: var(--clr-text-dark);
-        margin-bottom: 0.5rem;
-      }
-      .contact-inline {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0.75rem 1.5rem;
-        font-size: 0.95rem;
-        color: var(--clr-muted);
-      }
-      .contact-inline span {
-        display: flex;
-        align-items: center;
-        gap: 0.35rem;
-      }
-
-      .summary {
-        max-width: 900px;
-        margin: 0 auto 3rem auto;
-        font-size: 1rem;
-        padding: 0 1rem;
-      }
-
-      .resume-wrapper {
-        max-width: 1100px;
-        margin: auto;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        gap: 2rem;
-        padding: 0 1rem 4rem 1rem;
-      }
-
-      .resume-section h2 {
-        font-size: 1.5rem;
-        color: var(--clr-text-dark);
-        margin-bottom: 1rem;
-      }
-      .resume-item {
-        background-color: var(--clr-card);
-        border-radius: var(--radius-lg);
-        box-shadow: var(--shadow);
-        padding: 1.25rem 1.5rem;
-        margin-bottom: 1.5rem;
-      }
-      .resume-item:last-child {
-        margin-bottom: 0;
-      }
-      .resume-item h3 {
-        font-size: 1.1rem;
-        color: var(--clr-text-dark);
-        margin-bottom: 0.25rem;
-      }
-      .resume-item .sub {
-        font-size: 0.9rem;
-        color: var(--clr-muted);
-        margin-bottom: 0.75rem;
-      }
-      .resume-item ul {
-        list-style: disc inside;
-        padding-left: 0.5rem;
-      }
-
-      .skills {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-      }
-      .chip {
-        background-color: var(--clr-card);
-        border-radius: 9999px;
-        box-shadow: var(--shadow);
-        padding: 0.35rem 0.9rem;
-        font-size: 0.85rem;
-        white-space: nowrap;
-      }
-
-      @media (max-width: 600px) {
-        .hero h1 {
-          font-size: 1.75rem;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <nav class="navbar">
-        <div class="logo">Gurleen Sabharwal</div>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="project.html">Projects</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <section class="hero">
-      <h1>Resume</h1>
-      <div class="contact-inline">
-        <span>📍 Brooklyn, NY</span>
-        <span>📞 <a href="tel:+18456718177">+1 845 671 8177</a></span>
-        <span>✉️ <a href="mailto:gurleensab.work@gmail.com">gurleensab.work@gmail.com</a></span>
-        <span>💼 <a href="https://www.linkedin.com/in/gurleen-sabharwal" target="_blank">LinkedIn</a></span>
-      </div>
-    </section>
-
-    <section class="summary">
-      <p>
-        Results-driven data professional with a proven track record of driving 40%
-        reporting efficiency and enabling 25% faster product launches for Fortune 500
-        clients. Expert in SQL, Power BI, and Python, with hands-on experience in
-        ETL, data modeling, and business intelligence. Passionate about transforming
-        data into strategic decisions that accelerate business growth.
-      </p>
-    </section>
-
-    <div class="resume-wrapper">
-      <!-- Education -->
-      <section class="resume-section">
-        <h2>Education</h2>
-        <div class="resume-item">
-          <h3>MS in Data Analytics & Strategic Business Intelligence</h3>
-          <p class="sub">Long Island University, Brooklyn, NY • 2024–2026</p>
-          <p><strong>Key Coursework:</strong> Data Warehousing, Advanced Analytics, Decision Science</p>
-        </div>
-        <div class="resume-item">
-          <h3>B.Tech in Technology</h3>
-          <p class="sub">NIT Jalandhar, Punjab • 2019–2023</p>
-          <p><strong>Key Coursework:</strong> Database Systems, Machine Learning, Statistical Modelling</p>
-        </div>
-      </section>
-
-      <!-- Experience -->
-      <section class="resume-section">
-        <h2>Experience</h2>
-        <div class="resume-item">
-          <h3>Business Analyst – Strategic Research Insights</h3>
-          <p class="sub">Hyderabad, India • Jul 2023 – Jun 2024</p>
-          <ul>
-            <li>Developed advanced SQL queries to extract insights on provider behavior.</li>
-            <li>Built 10+ interactive dashboards in Power BI/Tableau, reducing reporting time by 40%.</li>
-            <li>Automated workflows in Python, improving accuracy and productivity.</li>
-            <li>Led KPI definition with teams to align analytics with business goals.</li>
-            <li>Optimized ETL pipelines and relational models for scalability.</li>
-          </ul>
-        </div>
-        <div class="resume-item">
-          <h3>Business Development Executive – Corizo</h3>
-          <p class="sub">Bangalore, India • Jan 2023 – May 2023</p>
-          <ul>
-            <li>Performed competitive analysis and market segmentation.</li>
-            <li>Boosted campaign effectiveness by 12% via conversion metric analysis.</li>
-            <li>Created executive dashboards for decision-making support.</li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Projects -->
-      <section class="resume-section">
-        <h2>Projects</h2>
-        <div class="resume-item">
-          <h3>Market Segmentation – Novartis</h3>
-          <p class="sub">Strategic Research Insights</p>
-          <ul>
-            <li>Clustered survey data from 500+ HCPs using SQL & SPSS.</li>
-            <li>Mapped patient demographics with external datasets.</li>
-            <li>Delivered Tableau dashboards to aid product adoption (25% gain).</li>
-          </ul>
-        </div>
-        <div class="resume-item">
-          <h3>Sales Data Analysis (Capstone)</h3>
-          <p class="sub">Self‑Guided</p>
-          <ul>
-            <li>Used SQL to identify trends & anomalies.</li>
-            <li>Built KPIs & slicer-enabled dashboards in Power BI.</li>
-            <li>Cut manual work by 40% with reusable data models.</li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Skills -->
-      <section class="resume-section">
-        <h2>Skills</h2>
-        <div class="skills">
-          <span class="chip">SQL</span><span class="chip">Python</span><span class="chip">Power BI</span>
-          <span class="chip">Tableau</span><span class="chip">Excel</span><span class="chip">SPSS</span>
-          <span class="chip">Data Cleaning</span><span class="chip">Statistical Analysis</span>
-          <span class="chip">ETL</span><span class="chip">Data Modeling</span><span class="chip">Dashboard Dev</span>
-          <span class="chip">KPI Tracking</span><span class="chip">Stakeholder Communication</span>
-        </div>
-      </section>
-
-      <!-- Certifications -->
-      <section class="resume-section">
-        <h2>Certifications & Courses</h2>
-        <div class="resume-item">
-          <ul>
-            <li>Google Data Analytics Professional Certificate</li>
-            <li>AWS Certified Cloud Practitioner</li>
-            <li>Complete Data Analyst Bootcamp</li>
-            <li>Advanced SQL for Data Analysis</li>
-            <li>Microsoft Power BI & Tableau Bootcamps</li>
-            <li>Python for Data Science & ML</li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Achievements -->
-      <section class="resume-section">
-        <h2>Achievements</h2>
-        <div class="resume-item">
-          <ul>
-            <li>Awarded <em>"Budding Star"</em> at Strategic Research Insights (2024).</li>
-            <li>Winner, National Hackathon at NIT Jalandhar.</li>
-            <li>Class 12 Topper in board examinations.</li>
-          </ul>
-        </div>
-      </section>
+  <!-- === EDUCATION === -->
+  <div id="education" class="timeline">
+    <div class="entry">
+      <h3>MS in Marketing Analytics</h3>
+      <p>Illinois Institute of Technology, Chicago, IL</p>
+      <div class="date">2024 – 2026</div>
     </div>
+    <div class="entry">
+      <h3>B.E. in Mechanical Engineering</h3>
+      <p>Gujarat Technological University, India</p>
+      <div class="date">2018 – 2022</div>
+    </div>
+  </div>
 
-    <footer style="text-align:center;padding:2rem 0;font-size:0.9rem;color:var(--clr-muted);">
-      © 2025 Gurleen Sabharwal • All rights reserved. • <a href="/GurleenSabharwalResume_.pdf" target="_blank">Download PDF</a>
-    </footer>
-  </body>
+  <!-- === EXPERIENCE === -->
+  <div id="experience" class="timeline" style="display: none;">
+    <div class="entry">
+      <h3>Business Analyst – Strategic Research Insights</h3>
+      <p>Hyderabad, India</p>
+      <div class="date">Jul 2023 – Jun 2024</div>
+    </div>
+    <div class="entry">
+      <h3>Business Development Executive – Corizo</h3>
+      <p>Bangalore, India</p>
+      <div class="date">Jan 2023 – May 2023</div>
+    </div>
+  </div>
+
+  <script>
+    function showSection(section) {
+      document.getElementById('education').style.display = section === 'education' ? 'block' : 'none';
+      document.getElementById('experience').style.display = section === 'experience' ? 'block' : 'none';
+      document.querySelectorAll('.tab').forEach(tab => {
+        tab.classList.remove('active');
+      });
+      document.querySelector(`.tab[onclick="showSection('${section}')"]`).classList.add('active');
+    }
+  </script>
+
+</body>
 </html>
