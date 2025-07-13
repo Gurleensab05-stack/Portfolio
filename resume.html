@@ -1,16 +1,12 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Resume | Gurleen Sabharwal</title>
+  <title>Resume | Gurleen Sabharwal </title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Inter', sans-serif;
       background-color: #fdfdfd;
@@ -31,7 +27,7 @@
       border: 2px solid transparent;
     }
     .tab.active {
-      background-color: #e9d5ff;
+      background-color: #e0d4f7;
       border-color: #a855f7;
       color: #6b21a8;
     }
@@ -62,7 +58,7 @@
     }
     .entry p {
       font-size: 0.95rem;
-      color: #555;
+      color: #444;
     }
     .entry .date {
       font-size: 0.9rem;
@@ -74,6 +70,9 @@
       font-size: 2rem;
       font-weight: 700;
       margin-bottom: 1rem;
+    }
+    @media screen and (max-width: 600px) {
+      .tabs { flex-direction: column; align-items: center; }
     }
   </style>
 </head>
@@ -89,27 +88,27 @@
   <!-- === EDUCATION === -->
   <div id="education" class="timeline">
     <div class="entry">
-      <h3>MS in Marketing Analytics</h3>
-      <p>Illinois Institute of Technology, Chicago, IL</p>
+      <h3>M.S. in Data Analytics & Strategic Business Intelligence</h3>
+      <p>Long Island University, Brooklyn, NY, USA</p>
       <div class="date">2024 – 2026</div>
     </div>
     <div class="entry">
-      <h3>B.E. in Mechanical Engineering</h3>
-      <p>Gujarat Technological University, India</p>
-      <div class="date">2018 – 2022</div>
+      <h3>B.Tech in Mechanical Engineering</h3>
+      <p>Dr. B.R. Ambedkar National Institute of Technology, Jalandhar, India</p>
+      <div class="date">2019 – 2023</div>
     </div>
   </div>
 
   <!-- === EXPERIENCE === -->
   <div id="experience" class="timeline" style="display: none;">
     <div class="entry">
-      <h3>Business Analyst – Strategic Research Insights</h3>
-      <p>Hyderabad, India</p>
+      <h3>Business Analyst</h3>
+      <p>Strategic Research Insights, Hyderabad, India</p>
       <div class="date">Jul 2023 – Jun 2024</div>
     </div>
     <div class="entry">
-      <h3>Business Development Executive – Corizo</h3>
-      <p>Bangalore, India</p>
+      <h3>Business Development Executive</h3>
+      <p>Corizo, Bangalore, India</p>
       <div class="date">Jan 2023 – May 2023</div>
     </div>
   </div>
