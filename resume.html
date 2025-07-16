@@ -3,149 +3,164 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Rumit Patel | Resume</title>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <title>Gurleen Sabharwal - Resume</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: 'Outfit', sans-serif;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 1000px;
       background: #fff;
-      color: #1f1f1f;
-      padding: 2rem;
+      margin: auto;
+      padding: 40px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-
-    .tabs {
+    h1, h2 {
+      color: #005a87;
+    }
+    h1 {
+      font-size: 2em;
+      margin-bottom: 5px;
+    }
+    h2 {
+      font-size: 1.4em;
+      margin-top: 40px;
+      border-bottom: 2px solid #005a87;
+      padding-bottom: 5px;
+    }
+    p, ul {
+      margin: 10px 0;
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+    .two-columns {
       display: flex;
-      justify-content: center;
-      margin-bottom: 3rem;
-      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: space-between;
     }
-
-    .tab {
-      padding: 0.6rem 1.4rem;
-      background: #f3e8ff;
-      border-radius: 20px;
-      color: #6b21a8;
-      font-weight: bold;
-      cursor: pointer;
-      transition: all 0.3s ease;
+    .left, .right {
+      width: 48%;
     }
-
-    .tab.active {
-      background: #a855f7;
-      color: #fff;
+    .contact a {
+      color: #005a87;
+      text-decoration: none;
     }
-
-    .timeline {
-      position: relative;
-      margin: 0 auto;
-      max-width: 800px;
-      padding-left: 40px;
-      border-left: 4px solid #a855f7;
-    }
-
-    .timeline-item {
-      position: relative;
-      margin-bottom: 2.5rem;
-    }
-
-    .timeline-item::before {
-      content: '';
-      position: absolute;
-      left: -11px;
-      top: 5px;
-      height: 14px;
-      width: 14px;
-      background-color: #a855f7;
-      border-radius: 50%;
-    }
-
-    .timeline-item h3 {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: #111827;
-      margin-bottom: 0.2rem;
-    }
-
-    .timeline-item p {
-      font-size: 1rem;
-      color: #374151;
-      margin-bottom: 0.3rem;
-    }
-
-    .timeline-item .date {
-      font-size: 0.95rem;
-      color: #9333ea;
-      margin-top: 0.25rem;
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-    }
-
-    .timeline-item .date i {
-      font-size: 0.9rem;
-    }
-
-    .section-title {
-      text-align: center;
-      font-size: 2rem;
-      font-weight: 900;
-      color: #1e1e1e;
-      margin-bottom: 2rem;
-    }
-
-    @media (max-width: 600px) {
-      .tab { font-size: 0.9rem; }
+    ul {
+      padding-left: 20px;
     }
   </style>
 </head>
 <body>
+  <div class="container">
+    <header>
+      <h1>Gurleen Sabharwal</h1>
+      <p class="contact">
+        📍 Brooklyn, NY &nbsp; | &nbsp; 
+        📧 <a href="mailto:gurleensab.work@gmail.com">gurleensab.work@gmail.com</a> &nbsp; | &nbsp;
+        📞 +1 (845) 671-8177 &nbsp; | &nbsp;
+        🔗 <a href="https://www.linkedin.com/in/gurleen-sabharwal" target="_blank">LinkedIn</a>
+      </p>
+    </header>
 
-  <h1 class="section-title">📄 Resume</h1>
+    <section class="section">
+      <h2>Summary</h2>
+      <p>
+        Results-driven data professional with a proven track record of driving 40% reporting efficiency and enabling 25% faster product launches for Fortune 500 clients. 
+        Expert in SQL, Power BI, and Python, with hands-on experience in ETL, data modeling, and business intelligence. Passionate about transforming data into strategic decisions 
+        that accelerate business growth.
+      </p>
+    </section>
 
-  <div class="tabs">
-    <div class="tab active" onclick="switchTab('education')">🎓 EDUCATION</div>
-    <div class="tab" onclick="switchTab('experience')">💼 EXPERIENCE</div>
+    <section class="section">
+      <h2>Experience</h2>
+      <div>
+        <strong>Business Analyst</strong>, Strategic Research Insights – Hyderabad, India<br>
+        <em>Jul 2023 – Jun 2024</em>
+        <ul>
+          <li>Developed SQL queries for healthcare datasets, enabling accurate insights into provider behavior and product performance.</li>
+          <li>Built 10+ Power BI/Tableau dashboards reducing reporting time by 40%.</li>
+          <li>Automated data transformation with Python, improving accuracy and team productivity.</li>
+          <li>Defined KPIs and built relational data models for scalable analytics.</li>
+        </ul>
+
+        <strong>Business Development Executive</strong>, Corizo – Bangalore, India<br>
+        <em>Jan 2023 – May 2023</em>
+        <ul>
+          <li>Used Excel/CRM tools for competitive analysis and market segmentation.</li>
+          <li>Analyzed conversion and marketing performance to improve campaigns by 12%.</li>
+          <li>Presented data dashboards to inform sales strategy.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Projects</h2>
+      <div>
+        <strong>Market Segmentation – Novartis</strong><br>
+        Strategic Research Insights, Hyderabad, India
+        <ul>
+          <li>Led segmentation project supporting new pharmaceutical launch.</li>
+          <li>Performed clustering using SPSS/SQL on survey data from 500+ healthcare professionals.</li>
+          <li>Enriched insights with secondary datasets and visualized via Tableau dashboards.</li>
+        </ul>
+
+        <strong>Sales Data Analysis – Capstone</strong><br>
+        <ul>
+          <li>Analyzed multi-dimensional sales data using advanced SQL.</li>
+          <li>Created interactive Power BI dashboards with drill-throughs and KPIs.</li>
+          <li>Automated ETL and reporting workflows to reduce effort by 40%.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Education</h2>
+      <div class="two-columns">
+        <div class="left">
+          <strong>MS in Data Analytics and Strategic Business Intelligence</strong><br>
+          Long Island University, Brooklyn, NY<br>
+          <em>2024 – 2026</em>
+        </div>
+        <div class="right">
+          <strong>B.Tech, Engineering</strong><br>
+          NIT Jalandhar, Punjab, India<br>
+          <em>2019 – 2023</em>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Skills</h2>
+      <p>
+        SQL, Python, Power BI, Tableau, Excel, SPSS, Data Cleaning, Data Modeling, ETL, KPI Tracking, Dashboard Development, Statistical Analysis
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Certifications</h2>
+      <ul>
+        <li>Google Data Analytics Professional Certificate</li>
+        <li>AWS Certified Cloud Practitioner</li>
+        <li>Advanced SQL for Data Analysis</li>
+        <li>Microsoft Power BI | Tableau Bootcamp | Python for Data Science</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Achievements</h2>
+      <ul>
+        <li>“Budding Star” Award – Strategic Research Insights</li>
+        <li>Winner, National Hackathon – NIT Jalandhar</li>
+        <li>Class 12 Academic Board Topper</li>
+      </ul>
+    </section>
   </div>
-
-  <!-- ========== EDUCATION ========== -->
-  <div id="education" class="timeline">
-    <div class="timeline-item">
-      <h3>M.S. in Data Analytics & Strategic Business Intelligence</h3>
-      <p>Long Island University, Brooklyn, NY, USA</p>
-      <div class="date"><i class="fas fa-calendar-alt"></i> August 2024 – May 2026</div>
-    </div>
-    <div class="timeline-item">
-      <h3>B.Tech in Mechanical Engineering</h3>
-      <p>Dr. B.R. Ambedkar NIT Jalandhar, India</p>
-      <div class="date"><i class="fas fa-calendar-alt"></i> July 2018 – July 2022</div>
-    </div>
-  </div>
-
-  <!-- ========== EXPERIENCE ========== -->
-  <div id="experience" class="timeline" style="display: none;">
-    <div class="timeline-item">
-      <h3>Business Analyst</h3>
-      <p>Strategic Research Insights, Hyderabad, India</p>
-      <div class="date"><i class="fas fa-calendar-alt"></i> Jul 2023 – Jun 2024</div>
-    </div>
-    <div class="timeline-item">
-      <h3>Business Development Executive</h3>
-      <p>Corizo, Bangalore, India</p>
-      <div class="date"><i class="fas fa-calendar-alt"></i> Jan 2023 – May 2023</div>
-    </div>
-  </div>
-
-  <script>
-    function switchTab(tabName) {
-      document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
-      document.querySelector(`.tab[onclick="switchTab('${tabName}')"]`).classList.add('active');
-
-      document.getElementById('education').style.display = (tabName === 'education') ? 'block' : 'none';
-      document.getElementById('experience').style.display = (tabName === 'experience') ? 'block' : 'none';
-    }
-  </script>
-
 </body>
 </html>
