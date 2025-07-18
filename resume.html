@@ -14,6 +14,33 @@
       background-color: #fff;
       color: #1c1c1c;
     }
+    header {
+      background: #fff;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 4px solid #2e2e3a;
+    }
+    .logo {
+      font-weight: 700;
+      font-size: 20px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #1c1c1c;
+      font-weight: 500;
+    }
+    nav ul li a:hover {
+      color: #7c3aed;
+    }
     .container {
       max-width: 900px;
       margin: auto;
@@ -98,6 +125,19 @@
   </style>
 </head>
 <body>
+  <header>
+    <div class="logo">Gurleen Sabharwal</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
   <div class="container">
     <div class="heading">
       <h1>MY RESUME</h1>
@@ -149,4 +189,3 @@
   </script>
 </body>
 </html>
-
