@@ -86,42 +86,71 @@
       background: #c084fc;
       color: white;
     }
+   
     .timeline {
       position: relative;
-      margin-top: 40px;
-      padding-left: 40px;
-      border-left: 3px solid #c084fc;
+      margin-top: 50px;
+      padding: 0 20px;
     }
-    .timeline-item {
-      margin-bottom: 60px; /* was 40px */
-      position: relative;
+
+    .timeline::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 4px;
+        height: 100%;
+        background-color: #c084fc;
     }
-    .timeline-item::before {
-      content: '';
-      position: absolute;
-      left: -20px;
-      top: 0;
-      transform: translateY(10px); /* vertically aligns the dot */
-      width: 16px;
-      height: 16px;
-      background: white;
-      border: 3px solid #c084fc;
-      border-radius: 50%;
+
+      .timeline-item {
+          position: relative;
+          width: 50%;
+          padding: 20px 40px;
+          box-sizing: border-box;
+      }
+
+      .timeline-item:nth-child(odd) {
+          left: 0;
+          text-align: right;
+      }
+      
+      .timeline-item:nth-child(even) {
+          left: 50%;
+          text-align: left;
+      }
+      
+      .timeline-item::after {
+            content: '';
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 16px;
+            height: 16px;
+            background-color: white;
+            border: 4px solid #c084fc;
+            border-radius: 50%;
+            z-index: 1;
     }
-    .timeline-item h3 {
-      margin: 0;
-      font-size: 18px;
-      font-weight: 700;
-    }
-    .timeline-item .location {
-      color: #666;
-      font-size: 15px;
-    }
-    .timeline-item .date {
-      font-size: 14px;
-      color: #c084fc;
-      margin-top: 5px;
-    }
+
+      .timeline-item h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin: 0 0 5px;
+      }
+      
+      .timeline-item .location {
+            font-size: 15px;
+            color: #666;
+      }
+      
+      .timeline-item .date {
+            font-size: 14px;
+            color: #c084fc;
+            margin-top: 5px;
+      }
     .hidden { display: none; }
   </style>
 </head>
@@ -163,6 +192,7 @@
         <div class="date"><i class="fa-regular fa-calendar"></i> 2019 – 2023</div>
       </div>
     </div>
+
 
     <div id="experience" class="timeline hidden">
       <div class="timeline-item">
