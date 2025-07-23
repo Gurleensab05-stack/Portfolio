@@ -2,17 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Gurleen Sabharwal - Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet" />
   <style>
+    /* Global Styles */
     body {
-      font-family: 'Outfit', sans-serif;
       margin: 0;
-      padding: 0;
+      font-family: 'Outfit', sans-serif;
       background: linear-gradient(135deg, #2c2e3e, #1f212a);
       color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
+
+    /* Navigation Bar Styling */
     header {
       background-color: #ffffff;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -21,6 +27,7 @@
       width: 100%;
       z-index: 1000;
     }
+
     .navbar {
       display: flex;
       justify-content: space-between;
@@ -29,11 +36,14 @@
       max-width: 1200px;
       margin: auto;
     }
+
     .navbar .logo {
       font-size: 1.5rem;
       font-weight: bold;
       color: #333;
+      user-select: none;
     }
+
     .navbar .nav-links {
       list-style: none;
       display: flex;
@@ -41,76 +51,110 @@
       margin: 0;
       padding: 0;
     }
+
     .navbar .nav-links li a {
       text-decoration: none;
       color: #333;
       font-weight: 500;
-      transition: color 0.3s;
-    }
-    .navbar .nav-links li a:hover {
-      color: #0077cc;
+      transition: color 0.3s ease;
     }
 
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 40px 20px;
+    .navbar .nav-links li a:hover,
+    .navbar .nav-links li a:focus {
+      color: #0077cc;
+      outline: none;
     }
-    .timeline {
-      position: relative;
-      margin-top: 50px;
-      padding: 0 20px;
+
+    /* Resume Button */
+    .resume-btn-container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 3rem auto;
+      text-align: center;
     }
-    .timeline::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 4px;
-      height: 100%;
-      background-color: #c084fc;
+
+    .resume-btn {
+      background-color: #8b5cf6;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+      transition: background-color 0.3s ease;
+      display: inline-block;
+      user-select: none;
     }
-    .timeline-item {
-      position: relative;
-      width: 50%;
-      padding: 20px 40px;
-      box-sizing: border-box;
+
+    .resume-btn:hover,
+    .resume-btn:focus {
+      background-color: #7c45e6;
+      outline: none;
     }
-    .timeline-item:nth-child(odd) {
-      left: 0;
-      text-align: right;
+
+    /* Main Section */
+    .section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 1200px;
+      margin: 0 auto 4rem auto;
+      padding: 2rem;
+      flex-grow: 1;
     }
-    .timeline-item:nth-child(even) {
-      left: 50%;
-      text-align: left;
+
+    @media (min-width: 768px) {
+      .section {
+        flex-direction: row;
+        text-align: left;
+      }
     }
-    .timeline-item::after {
-      content: '';
-      position: absolute;
-      top: 30px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 16px;
-      height: 16px;
-      background-color: white;
-      border: 4px solid #c084fc;
+
+    .profile-pic {
+      width: 400px;
+      height: 400px;
       border-radius: 50%;
-      z-index: 1;
+      overflow: hidden;
+      border: 6px solid #fff;
+      margin-bottom: 2rem;
+      flex-shrink: 0;
     }
-    .timeline-item h3 {
-      font-size: 18px;
-      font-weight: 700;
-      margin: 0 0 5px;
+
+    .profile-pic img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
     }
-    .timeline-item .location {
-      font-size: 15px;
-      color: #ccc;
+
+    @media (min-width: 768px) {
+      .profile-pic {
+        margin-right: 3rem;
+        margin-bottom: 0;
+      }
     }
-    .timeline-item .date {
-      font-size: 14px;
-      color: #c084fc;
-      margin-top: 5px;
+
+    .info h1 {
+      font-size: 3rem;
+      font-weight: 900;
+      margin: 0;
+      letter-spacing: 1px;
+    }
+
+    .info h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #b798f2;
+      margin: 0.8rem 0 1.5rem;
+    }
+
+    .info p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: #e0e0e0;
+      max-width: 650px;
     }
   </style>
 </head>
@@ -119,28 +163,32 @@
     <nav class="navbar">
       <div class="logo">Gurleen Sabharwal</div>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" aria-current="page">Home</a></li>
         <li><a href="project.html">Projects</a></li>
-        <li><a href="resume.html">Resume</a></li>
+        <li><a href="resume.html" target="_blank" rel="noopener noreferrer">Resume</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <div class="container">
-    <div class="timeline">
-      <div class="timeline-item">
-        <h3>M.S. in Data Analytics and Strategic Business Intelligence</h3>
-        <div class="location">Long Island University, Brooklyn, NY, USA</div>
-        <div class="date">2024 – 2026</div>
-      </div>
-      <div class="timeline-item">
-        <h3>B.Tech in Engineering</h3>
-        <div class="location">Dr. B.R. Ambedkar National Institute of Technology, Jalandhar, India</div>
-        <div class="date">2019 – 2023</div>
-      </div>
-    </div>
+  <div class="resume-btn-container">
+    <a href="resume.html" class="resume-btn" target="_blank" rel="noopener noreferrer">📄 View My Resume</a>
   </div>
+
+  <main class="section" role="main">
+    <div class="profile-pic" aria-label="Profile picture of Gurleen Sabharwal">
+      <img src="profile.jpg" alt="Gurleen Sabharwal" />
+    </div>
+    <div class="info">
+      <h1>GURLEEN SABHARWAL</h1>
+      <h2>DATA SCIENCE & ANALYTICS PROFESSIONAL</h2>
+      <p>
+        I am a data-driven graduate student passionate about transforming raw data into meaningful insights. 
+        With hands-on experience in SQL and Power BI at Strategic Research Insights, I thrive at uncovering 
+        trends that drive smart business decisions and strategic growth. 
+        Actively seeking internship roles where I can make impact.
+      </p>
+    </div>
+  </main>
 </body>
 </html>
-
