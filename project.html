@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Projects | Gurleen Sabharwal</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Projects - Gurleen Sabharwal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #fdfdfd;
+      font-family: 'Outfit', sans-serif;
       margin: 0;
       padding: 0;
+      background: linear-gradient(135deg, #2c2e3e, #1f212a);
+      color: white;
     }
 
-    /* Navigation Bar Styling */
     header {
       background-color: #ffffff;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -42,6 +42,8 @@
       list-style: none;
       display: flex;
       gap: 1.5rem;
+      margin: 0;
+      padding: 0;
     }
 
     .navbar .nav-links li a {
@@ -55,133 +57,96 @@
       color: #0077cc;
     }
 
-    .projects-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-      padding: 40px 20px;
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 50px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
     }
 
     .project-card {
-      background-color: white;
-      border-radius: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      width: 340px;
-      overflow: hidden;
-      transition: transform 0.2s ease;
+      background-color: #393b4d;
+      border-radius: 12px;
+      padding: 20px;
+      transition: transform 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     }
 
     .project-card:hover {
       transform: translateY(-5px);
     }
 
-    .image-wrapper {
-      height: 200px;
-      background-color: #f9fafb;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px;
-    }
-    
-    .project-image {
-      max-height: 100%;
-      max-width: 100%;
-      object-fit: contain;
+    .project-card h3 {
+      margin-top: 0;
+      color: #c084fc;
     }
 
-    .project-content {
-      padding: 20px;
+    .project-card p {
+      font-size: 15px;
+      color: #ddd;
     }
 
-    .project-title {
-      font-size: 1.3rem;
-      margin: 0;
-      color: #111827;
-    }
-
-    .project-tools {
-      font-size: 0.9rem;
-      color: #6b7280;
-      margin-bottom: 10px;
-    }
-
-    .project-description {
-      font-size: 0.95rem;
-      margin-bottom: 10px;
-    }
-
-    .project-links a {
-      color: #3b82f6;
+    .project-card a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #c084fc;
       text-decoration: none;
-      font-weight: 500;
+      font-weight: 600;
     }
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-      color: #6b7280;
+    .project-card a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-
-    <header>
+  <header>
     <nav class="navbar">
       <div class="logo">Gurleen Sabharwal</div>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="project.html">Projects</a></li>
-        <li><a href="resume.html">Resume</a></li> <!-- ✅ New Tab -->
+        <li><a href="resume.html">Resume</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-    
   </header>
 
-  <section class="projects-container">
+  <div class="container">
+    <h1>My Projects</h1>
+    <div class="projects-grid">
+      
+      <div class="project-card">
+        <h3>Cost of Living Dashboard</h3>
+        <p>Analyzed Indian cost of living using regional data. Created interactive dashboards using Power BI for clear visualization and insights.</p>
+        <a href="LINK_TO_DASHBOARD_IMAGE_OR_REPORT" target="_blank">View Project</a>
+      </div>
 
-    <!-- Project 1: Novartis Market Segmentation -->
-<div class="project-card">
-  <div class="image-wrapper">
-    <img src="A_website_portfolio_image_consists_of_two_main_sec.png" alt="Segmentation" class="project-image" />
-  </div>
-  <div class="project-content">
-    <h2 class="project-title">Market Segmentation – Novartis</h2>
-    <p class="project-tools">SQL • SPSS • Tableau • PowerPoint</p>
-    <p class="project-description">
-      Led an end-to-end segmentation project to support the launch of a new pharmaceutical product.
-      Performed cluster analysis on structured survey data from 500+ healthcare professionals and integrated secondary datasets.
-      Delivered actionable targeting strategies that accelerated product adoption by 25%.
-    </p>
-  </div>
-</div>
+      <div class="project-card">
+        <h3>Pharma Segmentation Project – Novartis</h3>
+        <p>Performed market segmentation using conjoint analysis to help launch a new product. Delivered insights that supported strategic decision-making.</p>
+        <a href="LINK_TO_PROJECT_DETAILS" target="_blank">View Details</a>
+      </div>
 
-<!-- Project 2: Sales Data Analysis -->
-<div class="project-card">
-  <div class="image-wrapper">
-    <img src="92f108ce-a1d1-40e2-a1bd-bfba8553a339.png" alt="Sales Dashboard" class="project-image" />
-  </div>
-  <div class="project-content">
-    <h2 class="project-title">Sales Data Analysis</h2>
-    <p class="project-tools">SQL • Power BI • ETL • Data Modeling</p>
-    <p class="project-description">
-      Analyzed multi-market sales data using advanced SQL and built interactive Power BI dashboards.
-      Performed trend analysis, visualized top customers/products, and automated ETL pipelines to reduce reporting time by 40%.
-    </p>
-    <div class="project-links">
-      <a href="https://github.com/Gurleensab05-stack/Sales-Data-Analysis" target="_blank">🔗 GitHub Repo</a>
+      <div class="project-card">
+        <h3>Customer Churn Analysis</h3>
+        <p>Used Python and logistic regression to predict churn behavior and suggest business retention strategies for a telecom dataset.</p>
+        <a href="LINK_TO_NOTEBOOK_OR_PPT" target="_blank">View Project</a>
+      </div>
+
     </div>
   </div>
-</div>
-
-  </section>
-
-  <footer>
-    &copy; 2025 Gurleen Sabharwal • All rights reserved.
-  </footer>
-
 </body>
 </html>
