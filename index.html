@@ -156,6 +156,138 @@
       color: #e0e0e0;
       max-width: 650px;
     }
+
+    /* About Me Section */
+    .about-section {
+      background: white;
+      color: #333;
+      padding: 4rem 2rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      max-width: 1200px;
+      margin: 0 auto 4rem auto;
+    }
+
+    .about-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    @media (min-width: 768px) {
+      .about-container {
+        flex-direction: row;
+        align-items: flex-start;
+      }
+    }
+
+    .about-pic {
+      width: 350px;
+      height: auto;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      flex-shrink: 0;
+    }
+
+    .about-pic img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 20px;
+    }
+
+    .about-text h2 {
+      font-size: 2rem;
+      font-weight: 900;
+      margin-bottom: 1.5rem;
+      color: #1f212a;
+    }
+
+    .about-text p {
+      font-size: 1.15rem;
+      line-height: 1.7;
+      color: #444;
+      max-width: 700px;
+    }
+
+    /* Skills Section Styles */
+    .skills-section {
+      padding: 4rem 2rem;
+      background: #f9f7ff;
+      border-radius: 16px;
+      max-width: 1200px;
+      margin: 4rem auto;
+      color: #1f1f1f;
+    }
+
+    .skills-title {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: #1f212a;
+      margin-bottom: 3rem;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .skill-card {
+      background: #f4f0ff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      cursor: pointer;
+      transition: 0.3s ease;
+      border-left: 4px solid #c4a0ff;
+    }
+
+    .skill-card:hover {
+      background: #ede6ff;
+    }
+
+    .skill-header {
+      font-weight: 800;
+      font-size: 1.2rem;
+      color: #1f1f1f;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .skill-list {
+      margin-top: 1rem;
+      display: none;
+      list-style: disc;
+      padding-left: 1.5rem;
+      color: #444;
+      font-weight: 500;
+    }
+
+    .skill-card.open .skill-list {
+      display: block;
+    }
+
+    .skill-card .arrow {
+      color: #a370f7;
+      font-size: 1.2rem;
+      transition: transform 0.3s ease;
+    }
+
+    .skill-card.open .arrow {
+      transform: rotate(180deg);
+    }
   </style>
 </head>
 <body>
@@ -175,6 +307,7 @@
     <a href="resume.html" class="resume-btn" target="_blank" rel="noopener noreferrer">📄 View My Resume</a>
   </div>
 
+  <!-- Intro Section -->
   <main class="section" role="main">
     <div class="profile-pic" aria-label="Profile picture of Gurleen Sabharwal">
       <img src="profile.jpg" alt="Gurleen Sabharwal" />
@@ -190,5 +323,109 @@
       </p>
     </div>
   </main>
+
+  <!-- About Me Section -->
+  <section class="about-section">
+    <div class="about-container">
+      <div class="about-pic" aria-label="About Gurleen Sabharwal">
+        <img src="about .jpg.jpg" alt="About Me" />
+      </div>
+      <div class="about-text">
+        <h2>ABOUT ME</h2>
+        <p>
+          I am a data-driven analytics graduate with hands-on experience at Strategic Research Insights, 
+          where I built interactive dashboards and automated reporting workflows that improved efficiency by 40%. 
+          My work involved advanced SQL, Power BI, and Python to uncover healthcare trends and optimize product 
+          performance for Fortune 500 clients. During my academic journey, I led data projects in segmentation, 
+          sales analytics, and statistical modeling using tools like Tableau, SPSS, and ETL pipelines. 
+          These experiences have sharpened my ability to bridge technical solutions with business impact. 
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills-section">
+    <h2 class="skills-title">SKILLS</h2>
+    <div class="skills-grid">
+      <div class="skill-card" onclick="toggleSkill(this)" tabindex="0" role="button" aria-expanded="false" aria-controls="dev-skills" aria-label="Toggle Development skills details">
+        <div class="skill-header">
+          <span>🧱 DEVELOPMENT</span>
+          <span class="arrow">▼</span>
+        </div>
+        <ul class="skill-list" id="dev-skills">
+          <li>Python, SQL, Excel, SPSS, R</li>
+          <li>Data Cleaning & Mining</li>
+          <li>Statistical Analysis</li>
+        </ul>
+      </div>
+
+      <div class="skill-card" onclick="toggleSkill(this)" tabindex="0" role="button" aria-expanded="false" aria-controls="ml-skills" aria-label="Toggle Machine Learning skills details">
+        <div class="skill-header">
+          <span>🧠 MACHINE LEARNING</span>
+          <span class="arrow">▼</span>
+        </div>
+        <ul class="skill-list" id="ml-skills">
+          <li>Clustering & Segmentation (SPSS, SQL)</li>
+          <li>Supervised Models: Regression, Classification</li>
+          <li>Libraries: Scikit-learn, Pandas, NumPy</li>
+        </ul>
+      </div>
+
+      <div class="skill-card" onclick="toggleSkill(this)" tabindex="0" role="button" aria-expanded="false" aria-controls="frameworks-skills" aria-label="Toggle Frameworks skills details">
+        <div class="skill-header">
+          <span>🧰 FRAMEWORKS</span>
+          <span class="arrow">▼</span>
+        </div>
+        <ul class="skill-list" id="frameworks-skills">
+          <li>ETL Pipelines, Relational Modeling</li>
+          <li>Power BI, Tableau</li>
+          <li>Dashboard Development</li>
+        </ul>
+      </div>
+
+      <div class="skill-card" onclick="toggleSkill(this)" tabindex="0" role="button" aria-expanded="false" aria-controls="cloud-skills" aria-label="Toggle Cloud and Engineering skills details">
+        <div class="skill-header">
+          <span>☁ CLOUD & ENGINEERING</span>
+          <span class="arrow">▼</span>
+        </div>
+        <ul class="skill-list" id="cloud-skills">
+          <li>AWS Certified Cloud Practitioner</li>
+          <li>Schema Design & Normalization</li>
+          <li>Data Architecture Principles</li>
+        </ul>
+      </div>
+
+      <div class="skill-card" onclick="toggleSkill(this)" tabindex="0" role="button" aria-expanded="false" aria-controls="db-skills" aria-label="Toggle Databases and Visualization skills details">
+        <div class="skill-header">
+          <span>📊 DATABASES & VIZ</span>
+          <span class="arrow">▼</span>
+        </div>
+        <ul class="skill-list" id="db-skills">
+          <li>Power BI (10+ Dashboards Built)</li>
+          <li>Advanced SQL (Joins, CTEs, Window Functions)</li>
+          <li>Tableau, Excel Charts</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function toggleSkill(card) {
+      card.classList.toggle("open");
+      // Update aria-expanded attribute for accessibility
+      const expanded = card.classList.contains("open");
+      card.setAttribute("aria-expanded", expanded);
+    }
+    // Enable keyboard accessibility for skill cards
+    document.querySelectorAll('.skill-card').forEach(card => {
+      card.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggleSkill(card);
+        }
+      });
+    });
+  </script>
 </body>
 </html>
