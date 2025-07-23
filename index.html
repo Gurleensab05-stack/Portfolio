@@ -2,201 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Gurleen Sabharwal - Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
   <style>
     body {
-      margin: 0;
       font-family: 'Outfit', sans-serif;
+      margin: 0;
+      padding: 0;
       background: linear-gradient(135deg, #2c2e3e, #1f212a);
       color: white;
     }
-
-    .section {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      max-width: 1200px;
-      margin: 0 auto 4rem auto;
-    }
-
-    @media (min-width: 768px) {
-      .section {
-        flex-direction: row;
-        text-align: left;
-      }
-    }
-
-    .profile-pic, .about-pic {
-      width: 400px;
-      height: 400px;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 6px solid #fff;
-      margin-bottom: 2rem;
-      flex-shrink: 0;
-    }
-
-    .profile-pic img,
-    .about-pic img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-    }
-
-    @media (min-width: 768px) {
-      .profile-pic,
-      .about-pic {
-        margin-right: 3rem;
-        margin-bottom: 0;
-      }
-    }
-
-    .info h1 {
-      font-size: 3rem;
-      font-weight: 900;
-      margin: 0;
-      letter-spacing: 1px;
-    }
-
-    .info h2 {
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: #b798f2;
-      margin: 0.8rem 0 1.5rem;
-    }
-
-    .info p {
-      font-size: 1.2rem;
-      line-height: 1.8;
-      color: #e0e0e0;
-      max-width: 650px;
-    }
-
-    .about-section {
-      background: white;
-      color: #333;
-      padding: 4rem 2rem;
-      border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-      max-width: 1200px;
-      margin: 0 auto 4rem auto;
-    }
-
-    .about-section .about-text h2 {
-      font-size: 2rem;
-      font-weight: 900;
-      margin-bottom: 1.5rem;
-      color: #1f212a;
-    }
-
-    .about-text p {
-      font-size: 1.15rem;
-      line-height: 1.7;
-      color: #444;
-      max-width: 700px;
-    }
-
-    .about-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 2rem;
-    }
-
-    @media (min-width: 768px) {
-      .about-container {
-        flex-direction: row;
-        align-items: flex-start;
-      }
-
-      .about-pic {
-        border-radius: 20px;
-        width: 350px;
-        height: auto;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-      }
-    }
-
-    /* Skills Section Styles */
-    .skills-section {
-      padding: 4rem 2rem;
-      background: #f9f7ff;
-      border-radius: 16px;
-      max-width: 1200px;
-      margin: 4rem auto;
-      color: #1f1f1f;
-    }
-
-    .skills-title {
-      text-align: center;
-      font-size: 2.5rem;
-      font-weight: 900;
-      color: #1f212a;
-      margin-bottom: 3rem;
-    }
-
-    .skills-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-    }
-
-    @media (min-width: 768px) {
-      .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    .skill-card {
-      background: #f4f0ff;
-      border-radius: 12px;
-      padding: 1.5rem;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-      cursor: pointer;
-      transition: 0.3s ease;
-      border-left: 4px solid #c4a0ff;
-    }
-
-    .skill-card:hover {
-      background: #ede6ff;
-    }
-
-    .skill-header {
-      font-weight: 800;
-      font-size: 1.2rem;
-      color: #1f1f1f;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .skill-list {
-      margin-top: 1rem;
-      display: none;
-      list-style: disc;
-      padding-left: 1.5rem;
-      color: #444;
-      font-weight: 500;
-    }
-
-    .skill-card.open .skill-list {
-      display: block;
-    }
-
-    .skill-card .arrow {
-      color: #a370f7;
-      font-size: 1.2rem;
-      transition: transform 0.3s ease;
-    }
-
-    .skill-card.open .arrow {
-      transform: rotate(180deg);
-    }
-     /* Navigation Bar Styling */
     header {
       background-color: #ffffff;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -205,46 +21,99 @@
       width: 100%;
       z-index: 1000;
     }
-    
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    max-width: 1200px;
-    margin: auto;
-  }
-  
-  .navbar .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  .navbar .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-  }
-  
-  .navbar .nav-links li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    transition: color 0.3s;
-  }
-  
-  .navbar .nav-links li a:hover {
-    color: #0077cc;
-  }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .navbar .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #333;
+    }
+    .navbar .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar .nav-links li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    .navbar .nav-links li a:hover {
+      color: #0077cc;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+    .timeline {
+      position: relative;
+      margin-top: 50px;
+      padding: 0 20px;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 4px;
+      height: 100%;
+      background-color: #c084fc;
+    }
+    .timeline-item {
+      position: relative;
+      width: 50%;
+      padding: 20px 40px;
+      box-sizing: border-box;
+    }
+    .timeline-item:nth-child(odd) {
+      left: 0;
+      text-align: right;
+    }
+    .timeline-item:nth-child(even) {
+      left: 50%;
+      text-align: left;
+    }
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      top: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 16px;
+      height: 16px;
+      background-color: white;
+      border: 4px solid #c084fc;
+      border-radius: 50%;
+      z-index: 1;
+    }
+    .timeline-item h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin: 0 0 5px;
+    }
+    .timeline-item .location {
+      font-size: 15px;
+      color: #ccc;
+    }
+    .timeline-item .date {
+      font-size: 14px;
+      color: #c084fc;
+      margin-top: 5px;
+    }
   </style>
 </head>
-  <!-- Resume Button Section -->
-  <div style="text-align: center; margin: 4rem 0;">
-  <a href="resume.html" style="background-color: #8b5cf6; color: white; padding: 1rem 2rem; border-radius: 10px; font-size: 1.1rem; font-weight: bold; text-decoration: none; box-shadow: 0 8px 16px rgba(0,0,0,0.15); transition: background 0.3s ease;">
-    📄 View My Resume
-  </a>
-  </div>
 <body>
   <header>
     <nav class="navbar">
@@ -252,120 +121,26 @@
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="project.html">Projects</a></li>
-        <li><a href="resume.html">Resume</a></li> <!-- ✅ New Tab -->
+        <li><a href="resume.html">Resume</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-    
   </header>
-  <!-- Intro Section -->
-  <div class="section" style="padding: 2rem;">
-    <div class="profile-pic">
-      <img src="profile.jpg" alt="Gurleen Sabharwal">
-    </div>
-    <div class="info">
-      <h1>GURLEEN SABHARWAL</h1>
-      <h2>DATA SCIENCE & ANALYTICS PROFESSIONAL</h2>
-      <p>
-        I am a data-driven graduate student passionate about transforming raw data into meaningful insights. 
-        With hands-on experience in SQL and Power BI at Strategic Research Insights, I thrive at uncovering 
-        trends that drive smart business decisions and strategic growth. 
-        Actively seeking internship roles where I can make impact.
-      </p>
-    </div>
-  </div>
 
-  <!-- About Me Section -->
-  <div class="about-section">
-    <div class="about-container">
-      <div class="about-pic">
-        <img src="about .jpg.jpg" alt="About Me">
+  <div class="container">
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>M.S. in Data Analytics and Strategic Business Intelligence</h3>
+        <div class="location">Long Island University, Brooklyn, NY, USA</div>
+        <div class="date">2024 – 2026</div>
       </div>
-      <div class="about-text">
-        <h2>ABOUT ME</h2>
-        <p>
-          I am a data-driven analytics graduate with hands-on experience at Strategic Research Insights, 
-          where I built interactive dashboards and automated reporting workflows that improved efficiency by 40%. 
-          My work involved advanced SQL, Power BI, and Python to uncover healthcare trends and optimize product 
-          performance for Fortune 500 clients. During my academic journey, I led data projects in segmentation, 
-          sales analytics, and statistical modeling using tools like Tableau, SPSS, and ETL pipelines. 
-          These experiences have sharpened my ability to bridge technical solutions with business impact. 
-        </p>
+      <div class="timeline-item">
+        <h3>B.Tech in Engineering</h3>
+        <div class="location">Dr. B.R. Ambedkar National Institute of Technology, Jalandhar, India</div>
+        <div class="date">2019 – 2023</div>
       </div>
     </div>
   </div>
-
-  <!-- Skills Section -->
-  <section class="skills-section">
-    <h2 class="skills-title">SKILLS</h2>
-    <div class="skills-grid">
-      <div class="skill-card" onclick="toggleSkill(this)">
-        <div class="skill-header">
-          <span>🧱 DEVELOPMENT</span>
-          <span class="arrow">▼</span>
-        </div>
-        <ul class="skill-list">
-          <li>Python, SQL, Excel, SPSS, R</li>
-          <li>Data Cleaning & Mining</li>
-          <li>Statistical Analysis</li>
-        </ul>
-      </div>
-
-      <div class="skill-card" onclick="toggleSkill(this)">
-        <div class="skill-header">
-          <span>🧠 MACHINE LEARNING</span>
-          <span class="arrow">▼</span>
-        </div>
-        <ul class="skill-list">
-          <li>Clustering & Segmentation (SPSS, SQL)</li>
-          <li>Supervised Models: Regression, Classification</li>
-          <li>Libraries: Scikit-learn, Pandas, NumPy</li>
-        </ul>
-      </div>
-
-      <div class="skill-card" onclick="toggleSkill(this)">
-        <div class="skill-header">
-          <span>🧰 FRAMEWORKS</span>
-          <span class="arrow">▼</span>
-        </div>
-        <ul class="skill-list">
-          <li>ETL Pipelines, Relational Modeling</li>
-          <li>Power BI, Tableau</li>
-          <li>Dashboard Development</li>
-        </ul>
-      </div>
-
-      <div class="skill-card" onclick="toggleSkill(this)">
-        <div class="skill-header">
-          <span>☁ CLOUD & ENGINEERING</span>
-          <span class="arrow">▼</span>
-        </div>
-        <ul class="skill-list">
-          <li>AWS Certified Cloud Practitioner</li>
-          <li>Schema Design & Normalization</li>
-          <li>Data Architecture Principles</li>
-        </ul>
-      </div>
-
-      <div class="skill-card" onclick="toggleSkill(this)">
-        <div class="skill-header">
-          <span>📊 DATABASES & VIZ</span>
-          <span class="arrow">▼</span>
-        </div>
-        <ul class="skill-list">
-          <li>Power BI (10+ Dashboards Built)</li>
-          <li>Advanced SQL (Joins, CTEs, Window Functions)</li>
-          <li>Tableau, Excel Charts</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <script>
-    function toggleSkill(card) {
-      card.classList.toggle("open");
-    }
-  </script>
 </body>
 </html>
 
