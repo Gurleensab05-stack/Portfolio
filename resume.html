@@ -1,17 +1,52 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gurleen Sabharwal - Resume</title>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pnVbWn3w+Mu3Uv2tCkTb+rwWk+l9CkM3dRnkF2Y0lVEc1P7WgRMpyyVqvW6Mw7S4BLR9LoRXmKkID+OU1XrY2Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Gurleen Sabharwal - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Outfit', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #fff;
-      color: #1c1c1c;
+      background: linear-gradient(135deg, #2c2e3e, #1f212a);
+      color: white;
+    }
+    header {
+      background-color: #ffffff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .navbar .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #333;
+    }
+    .navbar .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+    .navbar .nav-links li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    .navbar .nav-links li a:hover {
+      color: #0077cc;
     }
     .container {
       max-width: 1000px;
@@ -77,6 +112,17 @@
   </style>
 </head>
 <body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Gurleen Sabharwal</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
   <div class="container">
     <div class="timeline">
       <div class="timeline-item">
@@ -93,4 +139,3 @@
   </div>
 </body>
 </html>
-
