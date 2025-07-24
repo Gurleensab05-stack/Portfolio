@@ -32,12 +32,22 @@
       list-style: none;
       display: flex;
       gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+      align-items: center; /* vertically center items */
     }
 
     .nav-links a {
+      display: inline-flex; /* inline-flex for alignment */
+      align-items: center;
+      font-size: 1rem; /* explicit font size */
+      padding: 0.5rem 0.8rem; /* uniform vertical and horizontal padding */
       text-decoration: none;
       color: #333;
       font-weight: 500;
+      transition: color 0.3s ease;
+      user-select: none;
+      line-height: 1; /* reduce extra height */
     }
 
     .contact-container {
@@ -126,7 +136,7 @@
 
   <!-- NAVIGATION BAR -->
   <nav class="navbar">
-    <div class="logo">Kulveen Kaur</div>
+    <div class="logo">Gurleen Sabharwal</div>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="project.html">Projects</a></li>
@@ -140,8 +150,8 @@
     <div class="contact-left">
       <img src="96c76dfd-bf92-4eb8-80d9-e325affd4946.png" alt="Contact Icon">
       <h3>GET IN TOUCH</h3>
-      <p><strong>Name:</strong> Kulveen Kaur</p>
-      <p><strong>Email:</strong> <a href="mailto:kulveenkaur15@gmail.com">kulveenkaur15@gmail.com</a></p>
+      <p><strong>Name:</strong> Gurleen sabharwal</p>
+      <p><strong>Email:</strong> <a href="mailto:gurleensab.work@gmail.com">gurleensab.work@gmail.com</a></p>
     </div>
 
     <div class="contact-right">
