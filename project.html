@@ -1,117 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Projects | Gurleen Sabharwal</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
   <style>
     body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fdfdfd;
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f9f9f9;
-      color: #222;
+      padding: 0;
     }
 
+    /* Navigation Bar Styling */
     header {
-      background-color: #333;
-      padding: 20px;
-      text-align: center;
-      color: white;
-      font-size: 24px;
-      letter-spacing: 1px;
+      background-color: #ffffff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
     }
 
-    .projects-grid {
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .navbar .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .navbar .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .navbar .nav-links li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .navbar .nav-links li a:hover {
+      color: #0077cc;
+    }
+
+    .projects-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 40px;
-      padding: 50px;
+      gap: 2rem;
+      padding: 40px 5%;
       max-width: 1200px;
-      margin: 0 auto;
+      margin: auto;
     }
 
     .project-card {
-      background-color: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      padding: 30px 20px;
-      text-align: center;
-      transition: transform 0.3s ease;
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.2s ease;
+      display: flex;
+      flex-direction: column;
     }
 
     .project-card:hover {
       transform: translateY(-5px);
     }
 
-    .project-title {
-      font-size: 20px;
-      font-weight: bold;
-      margin-bottom: 20px;
-      text-transform: uppercase;
-      color: #222;
+    .image-wrapper {
+      height: 180px;
+      background-color: #f9fafb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
     }
 
-    .project-img {
+    .project-image {
+      max-height: 100%;
       max-width: 100%;
-      height: auto;
-      border-radius: 10px;
-      margin-bottom: 20px;
+      object-fit: contain;
+    }
+
+    .project-content {
+      padding: 20px;
+      flex: 1;
+    }
+
+    .project-title {
+      font-size: 1.3rem;
+      margin: 0;
+      color: #111827;
+    }
+
+    .project-tools {
+      font-size: 0.9rem;
+      color: #6b7280;
+      margin-bottom: 10px;
     }
 
     .project-description {
-      font-size: 16px;
-      color: #555;
-      line-height: 1.6;
+      font-size: 0.95rem;
+      margin-bottom: 10px;
     }
 
-    @media (max-width: 768px) {
-      .projects-grid {
-        padding: 30px 20px;
-      }
+    .project-links a {
+      color: #3b82f6;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #6b7280;
     }
   </style>
 </head>
 <body>
 
   <header>
-    My Projects
+    <nav class="navbar">
+      <div class="logo">Gurleen Sabharwal</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="contact.html">Contact</a></li> <!-- ✅ Fixed Contact link -->
+      </ul>
+    </nav>
   </header>
 
-  <section class="projects-grid">
+  <section class="projects-container">
+
+    <!-- Project 1 -->
     <div class="project-card">
-      <h2 class="project-title">Dementia Detection and Severity Prediction</h2>
-      <img src="images/dementia.png" alt="Dementia Detection" class="project-img" />
-      <p class="project-description">
-        An AI-powered system that leverages CNN, Grad-CAM, and DCGAN to detect and classify dementia severity from MRI brain scans.
-      </p>
-    </div>
-
-    <div class="project-card">
-      <h2 class="project-title">Job Market Trends Analysis</h2>
-      <img src="images/job-market.png" alt="Job Market Trends" class="project-img" />
-      <p class="project-description">
-        Analyzed real-time job postings using Python and Tableau to uncover in-demand skills, keyword trends, and hiring patterns across industries.
-      </p>
-    </div>
-
-    <!-- Add more project cards here if needed -->
-
-  </section>
-
-</body>
-</html>
-    <div class="project-content">
-      <h2 class="project-title">Sales Data Analysis</h2>
-      <p class="project-tools">SQL • Power BI • ETL • Data Modeling</p>
-      <p class="project-description">
-        Analyzed multi-market sales data using SQL and built Power BI dashboards.
-        Automated reporting pipelines to reduce manual effort by 40%.
-      </p>
-      <div class="project-links">
-        <a href="https://github.com/Gurleensab05-stack/Sales-Data-Analysis" target="_blank">🔗 GitHub Repo</a>
+      <div class="image-wrapper">
+        <img src="A_website_portfolio_image_consists_of_two_main_sec.png" alt="Segmentation" class="project-image" />
+      </div>
+      <div class="project-content">
+        <h2 class="project-title">Market Segmentation – Novartis</h2>
+        <p class="project-tools">SQL • SPSS • Tableau • PowerPoint</p>
+        <p class="project-description">
+          Led an end-to-end segmentation project to support the launch of a new pharmaceutical product.
+          Performed cluster analysis on structured survey data from 500+ healthcare professionals and integrated secondary datasets.
+          Delivered actionable targeting strategies that accelerated product adoption by 25%.
+        </p>
       </div>
     </div>
-  </div>
+
+    <!-- Project 2 -->
+    <div class="project-card">
+      <div class="image-wrapper">
+        <img src="92f108ce-a1d1-40e2-a1bd-bfba8553a339.png" alt="Sales Dashboard" class="project-image" />
+      </div>
+      <div class="project-content">
+        <h2 class="project-title">Sales Data Analysis</h2>
+        <p class="project-tools">SQL • Power BI • ETL • Data Modeling</p>
+        <p class="project-description">
+          Analyzed multi-market sales data using advanced SQL and built interactive Power BI dashboards.
+          Performed trend analysis, visualized top customers/products, and automated ETL pipelines to reduce reporting time by 40%.
+        </p>
+        <div class="project-links">
+          <a href="https://github.com/Gurleensab05-stack/Sales-Data-Analysis" target="_blank">🔗 GitHub Repo</a>
+        </div>
+      </div>
+    </div>
+
   </section>
+
+  <footer>
+    &copy; 2025 Gurleen Sabharwal • All rights reserved.
+  </footer>
+
 </body>
 </html>
