@@ -1,34 +1,104 @@
-<!-- Contact Section -->
-<section id="contact" style="max-width: 1200px; margin: 4rem auto; padding: 2rem; background: #f9f7ff; border-radius: 16px; color: #1f1f1f; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
-  <h2 style="text-align: center; font-size: 2.5rem; font-weight: 900; margin-bottom: 2rem;">Contact Me</h2>
-  <div style="display: flex; flex-direction: column; gap: 2rem; max-width: 900px; margin: auto;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact | Gurleen Sabharwal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
 
-    <div style="display: flex; flex-direction: column; gap: 2rem;">
+  <!-- ✅ Same Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Gurleen Sabharwal</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-      <form style="flex: 1;" onsubmit="event.preventDefault(); alert('Message sent!');">
-        <label for="name" style="display:block; font-weight: 700; margin-bottom: 0.5rem;">Name</label>
-        <input type="text" id="name" name="name" required
-               style="width: 100%; padding: 0.75rem; border-radius: 8px; border: 1px solid #ccc; font-size: 1rem;"/>
+  <!-- ✅ Contact Section -->
+  <section class="contact-container">
+    <h1>Contact Me</h1>
+    <p>You can reach out via email or LinkedIn. I'm happy to connect!</p>
+    <ul>
+      <li>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></li>
+      <li>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></li>
+    </ul>
+  </section>
 
-        <label for="email" style="display:block; font-weight: 700; margin: 1.5rem 0 0.5rem;">Email</label>
-        <input type="email" id="email" name="email" required
-               style="width: 100%; padding: 0.75rem; border-radius: 8px; border: 1px solid #ccc; font-size: 1rem;"/>
+  <!-- ✅ Same Styling -->
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      color: #222;
+    }
 
-        <label for="message" style="display:block; font-weight: 700; margin: 1.5rem 0 0.5rem;">Message</label>
-        <textarea id="message" name="message" rows="6" required
-                  style="width: 100%; padding: 0.75rem; border-radius: 8px; border: 1px solid #ccc; font-size: 1rem;"></textarea>
+    .navbar {
+      background-color: #333;
+      color: #fff;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-        <button type="submit" style="margin-top: 1.5rem; background-color: #8b5cf6; color: white; padding: 0.75rem 2rem; border: none; border-radius: 10px; font-size: 1.1rem; cursor: pointer; font-weight: 700; transition: background-color 0.3s ease;">
-          Send Message
-        </button>
-      </form>
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+    }
 
-      <div style="flex: 1; background: #ede6ff; border-radius: 12px; padding: 2rem; display: flex; flex-direction: column; justify-content: center; box-shadow: 0 8px 20px rgba(0,0,0,0.05);">
-        <h3 style="color: #1f212a; font-size: 1.8rem; font-weight: 900; margin-bottom: 1rem;">Reach Me At</h3>
-        <p style="font-size: 1.15rem; color: #333; margin-bottom: 0.75rem;"><strong>Email:</strong></p>
-        <a href="mailto:your.email@example.com" style="color: #8b5cf6; font-size: 1.25rem; text-decoration: none;">your.email@example.com</a>
-      </div>
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
 
-    </div>
-  </div>
-</section>
+    .nav-links li a {
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    .nav-links li a:hover {
+      color: #ffcc00;
+    }
+
+    .contact-container {
+      max-width: 700px;
+      margin: 60px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-container h1 {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .contact-container p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .contact-container a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+
+    .contact-container a:hover {
+      text-decoration: underline;
+    }
+  </style>
+
+</body>
+</html>
